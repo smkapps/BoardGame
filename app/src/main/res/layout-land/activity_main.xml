@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+    android:orientation="horizontal"
+android:padding="@dimen/customPadding"
+    android:background="@drawable/background_board">
+
+
+    
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:id="@+id/layoutGrid">
+            
+        </android.support.v7.widget.GridLayout>
+
+    </FrameLayout>
+
+
+
+    <RelativeLayout
+    android:layout_width="150dp"
+    android:layout_height="match_parent"
+    android:layout_weight="0">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_group"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:layout_alignRight="@id/newGame">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio3"
+                android:text="3x3"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio4"
+                android:text="4x4"
+                android:checked="true"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio5"
+                android:text="5x5"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio6"
+                android:text="6x6"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"/>
+
+        </RadioGroup>
+        <TextView
+            android:id="@+id/moves_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:layout_alignRight="@id/newGame"
+            android:layout_above="@+id/newGame"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <Button
+            android:id="@+id/newGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_game"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+
+
+
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
